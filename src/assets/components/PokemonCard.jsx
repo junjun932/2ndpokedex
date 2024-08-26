@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const Card = styled.div``;
 
@@ -14,13 +14,18 @@ function PokemonCard({ pokemon, onAdd, onRemove, isSelected }) {
         <button
           type="button"
           onClick={() => {
-            onAdd(pokemon);
+            onRemove(pokemon);
           }}
         >
           삭제
         </button>
       ) : (
-        <button type="button" onClick={onRemove}>
+        <button
+          type="button"
+          onClick={() => {
+            onAdd(pokemon);
+          }}
+        >
           추가
         </button>
       )}
