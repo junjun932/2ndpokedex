@@ -6,6 +6,7 @@ function Home() {
   return (
     <div>
       <h1>포켓몬 도감</h1>
+      <img src="pokedex.png" />
       <button onClick={() => navigate("/dex")}>포켓몬 도감 시작하기</button>
     </div>
   );
