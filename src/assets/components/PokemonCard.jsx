@@ -11,15 +11,18 @@ function PokemonCard({ pokemon, onAdd, onRemove, isSelected }) {
       <img src={pokemon.img_url} alt={`${pokemon.korean_name}`} />
       <p>{pokemon.korean_name}</p>
       {isSelected ? (
-        <Button
+        <button
+          type="button"
           onClick={() => {
             onAdd(pokemon);
           }}
         >
-          추가
-        </Button>
+          삭제
+        </button>
       ) : (
-        <Button onClick={onRemove}>삭제</Button>
+        <button type="button" onClick={onRemove}>
+          추가
+        </button>
       )}
     </Card>
   );
