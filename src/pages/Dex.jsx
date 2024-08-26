@@ -8,14 +8,17 @@ function Dex() {
   const [selectedPokemon, setSelectedPokemon] = useState([]);
 
   const addPokemon = (pokemon) => {
-    return [...selectedPokemon, pokemon];
+    setSelectedPokemon([...selectedPokemon, pokemon]);
+    console.log(selectedPokemon);
   };
 
   const removePokemon = (pokemon) => {
-    {
-      // return selectedPokemonList.filter(())
-    }
+    const updatedPokemonList = selectedPokemon.filter(
+      (item) => item.id !== pokemon.id
+    );
+    setSelectedPokemon(updatedPokemonList);
   };
+  console.log(MOCK_DATA);
 
   return (
     <div>

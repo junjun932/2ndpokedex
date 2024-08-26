@@ -5,9 +5,10 @@ const Card = styled.div``;
 const Button = styled.div``;
 
 function PokemonCard({ pokemon, onAdd, onRemove, isSelected }) {
+  console.log(pokemon);
   return (
     <Card>
-      <img src={""} alt={""} />
+      <img src={pokemon.img_url} alt={`${pokemon.korean_name}`} />
       <p>{pokemon.korean_name}</p>
       {isSelected ? (
         <Button
