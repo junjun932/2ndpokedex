@@ -8,14 +8,7 @@ function Dex() {
   const [selectedPokemon, setSelectedPokemon] = useState([]);
 
   const addPokemon = (pokemon) => {
-    
-  
-  }
-  )
-
-  }
-  )
-   
+    return [...selectedPokemon, pokemon];
   };
 
   const removePokemon = (pokemon) => {
