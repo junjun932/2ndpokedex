@@ -1,8 +1,9 @@
 import styled from 'styled-components';
+import PokemonCard from './PokemonCard';
 
 const DashboardContainer = styled.div``;
 
-const Dashboard = ({ seletedPokemon }) => {
+const Dashboard = ({ seletedPokemon, onRemovePokemon }) => {
   return (
     <DashboardContainer>
       <h2>들어가라 포켓몬 </h2>
@@ -11,10 +12,18 @@ const Dashboard = ({ seletedPokemon }) => {
       ) : (
         <ul>
           {seletedPokemon.map((pokemon) => (
-            <li key={pokemon.id}>
-              {pokemon.korean_name}
-              {pokemon.removePokemon} <img src={pokemon.img_url} />
-            </li>
+            // <li key={pokemon.id}>
+            //   {pokemon.korean_name}
+            //   {pokemon.removePokemon} <img src={pokemon.img_url} />
+            //   <button>삭제</button>
+            // </li>
+
+            <PokemonCard
+              key={pokemon.id}
+              pokemon={pokemon}
+              onRemove={onRemovePokemon}
+              isSelected={true}
+            />
           ))}
         </ul>
       )}

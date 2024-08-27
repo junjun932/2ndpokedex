@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { usePokemon } from '../../context/pokemonContext';
 
 const Card = styled.div`
   text-align: center;
@@ -12,6 +13,8 @@ const Button = styled.div`
 `;
 
 function PokemonCard({ pokemon, onAdd, onRemove, isSelected }) {
+  const usepokemon = usePokemon();
+  console.log(usepokemon);
   return (
     <Card>
       <img src={pokemon.img_url} />
