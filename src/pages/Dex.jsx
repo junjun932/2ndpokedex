@@ -12,6 +12,10 @@ function Dex() {
       alert('중복된 포켓몬이 있습니다');
       return;
     }
+    if (selectedPokemon.length >= 6) {
+      alert('포켓몬은 최대 6마리까지 선택할 수 있습니다.');
+      return;
+    }
     setSelectedPokemon([...selectedPokemon, pokemon]);
     // console.log(selectedPokemon);
   };
