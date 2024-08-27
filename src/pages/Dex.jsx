@@ -2,6 +2,7 @@ import { useState } from 'react';
 import MOCK_DATA from '../../mock';
 import Dashboard from '../assets/components/Dashboard';
 import PokemonList from '../assets/components/PokemonList';
+import styled from 'styled-components';
 
 //selectedPokemon =삳태 , setSelectedPokemon=상태변경함수 , useState(초기값)
 function Dex() {

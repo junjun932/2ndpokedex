@@ -1,5 +1,6 @@
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import MOCK_DATA from '../../mock';
+import styled from 'styled-components';
 
 function PokemonDetail() {
   const [searchParams] = useSearchParams();
@@ -12,7 +13,7 @@ function PokemonDetail() {
   }
 
   return (
-    <div>
+    <div className="DetailContainer">
       <img src={pokemon.img_url} alt={pokemon.korean_name} />
       <h2>{pokemon.korean_name}</h2>
       <p>타입: {pokemon.types.join(', ')}</p>

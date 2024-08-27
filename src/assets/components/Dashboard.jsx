@@ -1,7 +1,11 @@
 import styled from 'styled-components';
 import PokemonCard from './PokemonCard';
 
-const DashboardContainer = styled.div``;
+const DashboardContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
 
 const Dashboard = ({ seletedPokemon, onRemovePokemon }) => {
   return (
@@ -10,7 +14,7 @@ const Dashboard = ({ seletedPokemon, onRemovePokemon }) => {
       {seletedPokemon.length === 0 ? (
         <p>선택된 포켓몬이 없습니다.</p>
       ) : (
-        <ul>
+        <div>
           {seletedPokemon.map((pokemon) => (
             // <li key={pokemon.id}>
             //   {pokemon.korean_name}
@@ -25,7 +29,7 @@ const Dashboard = ({ seletedPokemon, onRemovePokemon }) => {
               isSelected={true}
             />
           ))}
-        </ul>
+        </div>
       )}
     </DashboardContainer>
   );

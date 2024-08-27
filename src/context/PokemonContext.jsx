@@ -10,11 +10,11 @@ export function PokemonProvider({ children }) {
   const [selectedPokemon, setSelectedPokemon] = useState([]);
 
   const addPokemon = (pokemon) => {
-    //addlogig here
+    setSelectedPokemon((prev) => [...prev, pokemon]);
   };
 
   const removePokemon = (pokemon) => {
-    //removelogic here
+    setSelectedPokemon((prev) => prev.filter((p) => p !== pokemon));
   };
   return (
     <PokemonContext.Provider
