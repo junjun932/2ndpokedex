@@ -1,3 +1,5 @@
+import { MOCK_DATA } from './mock';
+
 function PokemonDetail() {
   const pokemonId = 1; // 포켓몬 ID 를 쿼리스트링으로부터 받아옵시다.
   const pokemon = MOCK_DATA.find((p) => p.id === pokemonId);
@@ -10,9 +12,10 @@ function PokemonDetail() {
     <div>
       <img src={pokemon.img_url} alt={pokemon.korean_name} />
       <h2>{pokemon.korean_name}</h2>
-      <p>타입: {pokemon.types.join(", ")}</p>
-
+      <p>타입: {pokemon.types.join(', ')}</p>
+      {/* {* onClick 이벤트를 완성해주세요. *} */}
       <button onClick={() => {}}>뒤로 가기</button>
+      뒤로 가기
     </div>
   );
 }

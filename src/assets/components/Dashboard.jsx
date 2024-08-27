@@ -12,7 +12,8 @@ const Dashboard = ({ seletedPokemon }) => {
         <ul>
           {seletedPokemon.map((pokemon) => (
             <li key={pokemon.id}>
-              {pokemon.korean_name} {pokemon.removePokemon}
+              {pokemon.korean_name}
+              {pokemon.removePokemon} <img src={pokemon.img_url} />
             </li>
           ))}
         </ul>

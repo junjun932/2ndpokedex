@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import PokemonCard from "./PokemonCard";
+import styled from 'styled-components';
+import PokemonCard from './PokemonCard';
 
 const ListContainer = styled.div`
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));

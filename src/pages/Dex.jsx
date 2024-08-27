@@ -22,7 +22,7 @@ function Dex() {
     );
     setSelectedPokemon(updatedPokemonList);
   };
-  console.log(MOCK_DATA);
+  // console.log(MOCK_DATA);
 
   return (
     <div>
@@ -32,6 +32,7 @@ function Dex() {
       />
 
       <PokemonList pokemonList={MOCK_DATA} onAddPokemon={addPokemon} />
+      <hr />
     </div>
   );
 }

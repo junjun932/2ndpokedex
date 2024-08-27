@@ -1,33 +1,25 @@
 import styled from 'styled-components';
 
-const Card = styled.div``;
+const Card = styled.div`
+  text-align: center;
+  border-radius: 10px;
+`;
 
-const Button = styled.div``;
+const Button = styled.div`
+  border-radius: 5px;
+  background-color: orange;
+  color: white;
+`;
 
 function PokemonCard({ pokemon, onAdd, onRemove, isSelected }) {
-  console.log(pokemon);
   return (
     <Card>
-      <img src={pokemon.img_url} alt={`${pokemon.korean_name}`} />
+      <img src={pokemon.img_url} />
       <p>{pokemon.korean_name}</p>
       {isSelected ? (
-        <button
-          type="button"
-          onClick={() => {
-            onRemove(pokemon);
-          }}
-        >
-          삭제
-        </button>
+        <Button onClick={() => onRemove(pokemon)}>삭제</Button>
       ) : (
-        <button
-          type="button"
-          onClick={() => {
-            onAdd(pokemon);
-          }}
-        >
-          추가
-        </button>
+        <Button onClick={() => onAdd(pokemon)}>추가</Button>
       )}
     </Card>
   );
